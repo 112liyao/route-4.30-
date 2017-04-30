@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/app.js"></script>
+    <style>
+        .view-animate {
+            transition:none;
+        }
+
+        /*
+        1.  先引入
+            a.  angular-animate   动画
+            b.  angular-route     实现路由 单页面路由
+
+         2.  加入依赖   ["ngRoute","ngAnimate"]
+
+         3.    配置路由
+
+         config(function($routeProvider){
+      $routeProvider.when("/",{
+          templateUrl:"main.html",
+          controller:"main"
+      }).when("/list/:id",{
+          templateUrl:"list.html",
+          controller:"list"
+      })
+    }).controller("main",function($scope){
+        $scope.data=[
+            1111,222,333,444,555
+        ]
+})
+
+     4.  配置动画
+
+
+
+
+        */
+    </style>
+</head>
+<body ng-app="myapp">
+<a href="#!/">首页</a>
+<a href="#!/list/1">导航1</a>
+<a href="#!/list/2">导航2</a>
+<div ng-view class="view-animate">
+
+</div>
+
+</body>
+</html>
